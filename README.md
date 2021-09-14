@@ -10,15 +10,15 @@ Specifically, it controls the coordination of real-time analysis of images strea
 ### Contents of this repository
 This repository contains a Visual Studio solution, which in turn contains the following files:
 
-* DisCo_main.cpp
+* **DisCo_main.cpp** - 
   Entry point and global control of the UI elements, and channel control.
-* DisCo_functions.cpp
+* **DisCo_functions.cpp** - 
   A collection of functions for e.g. channel control, particle detection, encapsulation, etc.
-* DisCo.h
+* **DisCo.h** - 
   **Most important Default definitions of regularly changed variables, control over compiler instructions for calibration menus.** Furthermore, includes, function prototypes, global variables.
-* ValveController.cpp
+* **ValveController.cpp** - 
   Wrapper class for the NIDAQmx library.
-* ValveController.h
+* **ValveController.h** - 
   Corresponding header file for corresponding .cpp file.
 
 ## Install and compile instructions
