@@ -21,6 +21,8 @@ This repository contains a Visual Studio solution, which in turn contains the fo
 * **ValveController.h** - 
   Corresponding header file for corresponding .cpp file.
 
+  Furthermore we added a calibration file for the OB1. Please consider this an example file and generate a custom file as described by the manufacturer.
+
 ### Not contained in this repository
 Multiple propriatry libraries, for which we do not hold any distribution rights, are utilized in this project, yet not contained in this repository. These libraries have to be obtained and instaled from third party suppliers. Instructions on how to obtain and link said libraries are given below.
 
