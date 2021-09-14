@@ -1,4 +1,4 @@
-# DisCo_source
+# DisCo repository
 This is the repository for the DisCo source code. The repository contains the source code, install instructions for the necessary dependencies, and compilation instructions. 
 
 ## General remarks
@@ -24,7 +24,7 @@ This repository contains a Visual Studio solution, which in turn contains the fo
   Furthermore we added a calibration file *calib* for the OB1 pressure regulator. Please consider this an example file and generate a custom file as described by the manufacturer.
 
 ### Not contained in this repository
-Multiple propriatry libraries, for which we do not hold any distribution rights, are utilized in this project, yet not contained in this repository. These libraries have to be obtained and instaled from third party suppliers. Instructions on how to obtain and link said libraries are given below.
+Multiple propriatry libraries, for which we do not hold any distribution rights, are utilized in this project, yet not contained in this repository. These libraries have to be obtained and installed from third party suppliers. Instructions on how to obtain and link said libraries are given below.
 
 ## Installation and compilation instructions
 *This project was generated with Visual Studio (version 2019) on Windows 10. These instructions assume the use of the same by the user. If not installed by default it is necessary to install VS2019 with the C++ toolchain.*
