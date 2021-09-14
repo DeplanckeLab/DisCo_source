@@ -7,6 +7,20 @@ The code in the presented form was developed specifically for the purpose of det
 ### Brief technical description
 Specifically, it controls the coordination of real-time analysis of images streamed from a camera connected to a microscope, with the actuation of solenoid valves and pressure regulators connected to a microfluidic device. Detection in a defined ROI is achieved by the following processing sequence 1. subsequent image subtraction, 2. thresholding, 3. hole filling, 4. contour detection, and 5. contour thresholding. Each of the two channels is continuously monitored in this manner to detect and place particles. Particles are detected and stopped by the following sequence of events: 1. Detect particles in a first ROI, 2. Initiate a valve placement sequence (valve oscillation), 3. detect the arrival of the particle in the second ROI. Each channel is controlled by an independent thread, which in contains a thread-pool of detection threads. Both channels are coordinating each other, and are stopping particles subsequently. While concurrent particle stopping is possible, we found that it leads to non predictable states. Upon successful particle placement in both channels a globally coordinated routine is ejecting the particle into a droplet, which is finally captured. An important aspect of the code is elaborate timing of events (apparent by the excessive use of sleep statements), only with which robust working of the system is possible. 
 
+### Contents of this repository
+This repository contains a Visual Studio solution, which in turn contains the following files:
+
+* DisCo_main.cpp
+  Entry point and global control of the UI elements, and channel control.
+* DisCo_functions.cpp
+  A collection of functions for e.g. channel control, particle detection, encapsulation, etc.
+* DisCo.h
+  **Most important Default definitions of regularly changed variables, control over compiler instructions for calibration menus.** Furthermore, includes, function prototypes, global variables.
+* ValveController.cpp
+  Wrapper class for the NIDAQmx library.
+* ValveController.h
+  Corresponding header file for corresponding .cpp file.
+
 ## Install and compile instructions
 Multiple external libraries are utilized in the DisCo source code. As some of these libraries are proprietary they are not distributed with the DisCo source code and need to be installed by the user. In order to compile the DisCo source code from source the following dependencies are required:
 * OpenCV 4 (prebuilt libraries are sufficient)
