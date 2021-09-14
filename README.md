@@ -24,13 +24,14 @@ This repository contains a Visual Studio solution, which in turn contains the fo
 ### Not contained in this repository
 Multiple propriatry libraries, for which we do not hold any distribution rights, are utilized in this project, yet not contained in this repository. These libraries have to be obtained and instaled from third party suppliers. Instructions on how to obtain and link said libraries are given below.
 
-## Install and compile instructions
+## Installation and compilation instructions
+This project was generated with Visual Studio (version 2019) on Windows 10. These instructions assume the use of the same by the user. If not installed by default it is necessary to install VS2019 with the C++ toolchain.
+
 Multiple external libraries are utilized in the DisCo source code. As some of these libraries are proprietary they are not distributed with the DisCo source code and need to be installed by the user. In order to compile the DisCo source code from source the following dependencies are required:
 * OpenCV 4 (prebuilt libraries are sufficient)
 * Ximea xiAPI
 * National Instruments X
 * Elveflow SDK
-Header files for the libraries are included
 
 ### OpenCV 4 prebuilt libraries:
 The OpenCV 4 prebuilt libraries can be downloaded from the following website:
@@ -42,11 +43,12 @@ https://www.elveflow.com/microfluidic-products/microfluidics-software/elveflow-s
 
 Extract the archive, and extract the zipped SDK contained within.
 
-### National Instruments NIDaqmx
+### National Instruments NIDAQmx
+Installer for the NIDAQmx library is located here:
 https://www.ni.com/en-us/support/downloads/drivers/download.ni-daqmx.html#409845
 
 ### Ximea xiAPI
-The installer for the Ximea xiAPI can be downloaded from the following website
+The installer for the Ximea xiAPI can be downloaded from the following website: 
 https://www.ximea.com/support/wiki/apis/XIMEA_Windows_Software_Package
 
 ### Linking libraries
