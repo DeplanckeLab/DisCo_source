@@ -25,12 +25,12 @@ This repository contains a Visual Studio solution, which in turn contains the fo
 Multiple propriatry libraries, for which we do not hold any distribution rights, are utilized in this project, yet not contained in this repository. These libraries have to be obtained and instaled from third party suppliers. Instructions on how to obtain and link said libraries are given below.
 
 ## Installation and compilation instructions
-This project was generated with Visual Studio (version 2019) on Windows 10. These instructions assume the use of the same by the user. If not installed by default it is necessary to install VS2019 with the C++ toolchain.
+*This project was generated with Visual Studio (version 2019) on Windows 10. These instructions assume the use of the same by the user. If not installed by default it is necessary to install VS2019 with the C++ toolchain.*
 
 Multiple external libraries are utilized in the DisCo source code. As some of these libraries are proprietary they are not distributed with the DisCo source code and need to be installed by the user. In order to compile the DisCo source code from source the following dependencies are required:
 * OpenCV 4 (prebuilt libraries are sufficient)
 * Ximea xiAPI
-* National Instruments X
+* National Instruments NIDAQmx
 * Elveflow SDK
 
 ### OpenCV 4 prebuilt libraries:
@@ -73,10 +73,10 @@ https://www.ximea.com/support/wiki/apis/XIMEA_Windows_Software_Package
    - NIDAQmx.lib
 
 ### Compile
-In principle the Visual Studio solution should now contain all necessary dependencies and should be able to compile the executable. Make sure to select *Release* and *x64*.
+The Visual Studio solution should now contain all necessary dependencies and be able to compile the DisCo executable. Make sure to select *Release* and *x64* for the build.
 
 ## Code adaptation and reuse
-The main intention of this repository is to provide a compilation ready version of the DisCo code to enable other laboratories to replicate our system. As indicated above, the code represents a specialized solution to the application it was written for, and the focus during development was not on reusability. Hence, although parts of the code could be readily incorporated in derivate projects, we recommend to consider refactoring the code before utilizing it as a development basis. 
+The main intention of this repository is to provide a compilation ready version of the DisCo code to enable other laboratories to replicate our system. As indicated above, the code represents a specialized solution to the application it was written for, and the focus during development was not on reusability. Hence, although parts of the code could be readily incorporated in derivate projects, we recommend to consider refactoring the code before utilizing it as a development basis.
 
 
 
